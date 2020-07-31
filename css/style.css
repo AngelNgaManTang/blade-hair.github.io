@@ -11,7 +11,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     color: #1404FB;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Nunito', sans-serif;
     min-height:  8vh;
 }
 .nav-links{
@@ -44,6 +44,7 @@ nav{
     height: 5px;
     background-color: #1404FB;
     margin: 5px;
+    transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 1500px){
@@ -59,13 +60,13 @@ nav{
     .nav-links{
         position: absolute;
         right: 0px;
-        height: 92vh;
-        top: 8vh;
+        height: 20%;
+        top: 5em;
         background-color: #FBAA04;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 100%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
@@ -75,7 +76,79 @@ nav{
     .burger{
         display: block;
     }
+    
 }
 .nav-active{
     transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(5px,5px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-7px,-20px);
+}
+
+
+
+#slider{
+    overflow: hidden;
+}
+#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+#slider figure img{
+    width: 20%;
+    float: left;
+}
+
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%
+    }
 }

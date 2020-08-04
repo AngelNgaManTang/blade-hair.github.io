@@ -1,3 +1,26 @@
+:root{
+    --ff-primary: 'PT Sans', sans-serif;
+    --ff-secondary: 'Ubuntu', sans-serif;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #FBAA04;
+    --clr-hamburger: #1404FB;
+
+    --fs-h1: 3.5rem;
+    --fs-h2: 3.25rem;
+    --fs-h3: 2.5rem;
+    --fs-h4: 2.25rem;
+    --fs-h5: 1.5rem;
+    --fs-body: 1.25rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -10,8 +33,8 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: #1404FB;
-    font-family: 'Nunito', sans-serif;
+    color: var(--clr-hamburger);
+    font-family: var(--ff-primary);
     min-height:  8vh;
 }
 .nav-links{
@@ -28,7 +51,7 @@ nav{
 }
 
 .nav-links a{
-    color: #1404FB;
+    color: var(--clr-hamburger);
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
@@ -42,7 +65,7 @@ nav{
 .burger div{
     width: 25px;
     height: 5px;
-    background-color: #1404FB;
+    background-color: var(--clr-hamburger);
     margin: 5px;
     transition: all 0.3s ease;
 }
@@ -62,7 +85,7 @@ nav{
         right: 0px;
         height: 20%;
         top: 5em;
-        background-color: #FBAA04;
+        background-color: var(--clr-accent);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -114,14 +137,16 @@ nav{
 #slider figure{
     position: relative;
     width: 500%;
-    margin: 0;
+    margin: auto;
     left: 0;
     animation: 20s slider infinite;
+    z-index: -1;
 }
 #slider figure img{
     width: 20%;
     float: left;
 }
+
 
 @keyframes slider{
     0%{
@@ -151,4 +176,21 @@ nav{
     100%{
         left: -400%
     }
+}
+
+.intro_title{
+    position: relative;
+    margin: auto;
+    width: 70%;
+    top: 10px;
+    color:var(--clr-hamburger);
+    font-family: var(--ff-primary);
+}
+.intro_subtitle{
+    position: relative;
+    margin: auto;
+    width: 70%;
+    top: 20px;
+    color:var(--clr-hamburger);
+    font-family: var(--ff-secondary);
 }

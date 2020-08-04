@@ -181,7 +181,7 @@ nav{
 .intro_title{
     position: relative;
     margin: auto;
-    width: 70%;
+    width: 80%;
     top: 10px;
     color:var(--clr-hamburger);
     font-family: var(--ff-primary);
@@ -189,8 +189,19 @@ nav{
 .intro_subtitle{
     position: relative;
     margin: auto;
-    width: 70%;
+    width: 80%;
     top: 20px;
     color:var(--clr-hamburger);
     font-family: var(--ff-secondary);
+}
+
+.aboutUs{
+    position: relative;
+    margin: auto;
+    width: 80%;
+    top: 5em;
+    font-family: var(--ff-secondary);
+    color: var(--clr-accent);
+
+    
 }

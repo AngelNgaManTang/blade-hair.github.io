@@ -27,7 +27,7 @@
     box-sizing: border-box;
 }
 .logo{
-    max-width: 10px;
+    max-width: 100px;
 }
 nav{
     display: flex;
@@ -92,6 +92,9 @@ nav{
         width: 100%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
+    }
+    .logo{
+        width:100%;
     }
     .nav-links li{
         opacity: 0;
@@ -183,6 +186,7 @@ nav{
     margin: auto;
     width: 80%;
     top: 10px;
+    text-align: center;
     color:var(--clr-hamburger);
     font-family: var(--ff-primary);
 }
@@ -191,6 +195,7 @@ nav{
     margin: auto;
     width: 80%;
     top: 20px;
+    text-align: center;
     color:var(--clr-hamburger);
     font-family: var(--ff-secondary);
 }
@@ -198,10 +203,60 @@ nav{
 .aboutUs{
     position: relative;
     margin: auto;
+    text-align: center;
     width: 80%;
     top: 5em;
     font-family: var(--ff-secondary);
     color: var(--clr-accent);
+}
+.aboutUs_title{
+    position: relative;
+    margin: auto;
+    width: 80%;
+    top: 2em;
+    text-align: center;
+    font-family: var(--ff-secondary);
+    color: var(--clr-accent);
 
+}
+.aboutUsInfo{
+    position: relative;
+    top:2em;
+}
+.aboutUsImg{
+    position: relative;
+    top:1em;
+    width:100%;
+    height: auto;
+}
+
+
+@media (min-width: 1000px) {
+    
+    .aboutUs {
+        display: grid;
+        margin: 2em 5em;
+        grid-column-gap: 1em;
+    }
+    .aboutUs, img{
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+    }
+    .aboutUsInfo{
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: left;
+        position: relative;
+        left:-1.5em;
+        width: calc(100% + 1.5em);
+        font-size:var(--fs-body) ;
+    }
+    .aboutUs_title{
+        position: relative;
+        margin: auto;
+    }
+    
     
 }

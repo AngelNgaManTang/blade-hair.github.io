@@ -25,15 +25,23 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    
+}
+section{
+    padding: 5em 2em;
+}
+html{
+    scroll-behavior: smooth;
 }
 .logo{
-    max-width: 100px;
+    max-width: 50px;
 }
 nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: var(--clr-hamburger);
+    font-size: var(--fs-body);
     font-family: var(--ff-primary);
     min-height:  8vh;
 }
@@ -93,9 +101,7 @@ nav{
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
-    .logo{
-        width:100%;
-    }
+   
     .nav-links li{
         opacity: 0;
     }
@@ -205,7 +211,7 @@ nav{
     margin: auto;
     text-align: center;
     width: 80%;
-    top: 5em;
+    
     font-family: var(--ff-secondary);
     color: var(--clr-accent);
 }
@@ -258,5 +264,33 @@ nav{
         margin: auto;
     }
     
-    
 }
+.services_title{
+    position: relative;
+    margin: auto;
+    width: 80%;
+   
+    text-align: center;
+    font-family: var(--ff-secondary);
+    color: var(--clr-hamburger);
+}
+
+.services_section{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    top:2em;
+    padding: 1em 0;
+    text-align: center;
+    background-image: url(../img/bladeServicesBackground.png);
+
+}
+.services_section ul li{
+    list-style: none;
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-body);
+    color: var(--clr-accent);
+    margin: auto;
+    padding: 0.5em 0;
+}
+
